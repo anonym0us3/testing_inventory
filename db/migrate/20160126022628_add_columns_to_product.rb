@@ -4,7 +4,7 @@ class AddColumnsToProduct < ActiveRecord::Migration
     add_column :products, :description, :string
     add_column :products, :category, :string
     add_column :products, :sku, :string
-    add_column :products, :wholesale, :float
-    add_column :products, :retail, :float
+    add_column :products, :wholesale, :decimal
+    add_column :products, :retail, :decimal
   end
 end

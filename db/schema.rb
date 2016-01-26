@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20160126022628) do
     t.string   "description"
     t.string   "category"
     t.string   "sku"
-    t.float    "wholesale"
-    t.float    "retail"
+    t.decimal  "wholesale"
+    t.decimal  "retail"
   end
 
 end

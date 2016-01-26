@@ -191,4 +191,13 @@ RSpec.describe ProductsController, type: :controller do
       expect(response).to redirect_to(root_path)
     end
   end
+
+  describe "#margin" do
+    let(:product) { FactoryGirl.create(:product) }
+
+    it "calculates margin between wholesale & retail" do
+      expect(product.margin).to eq( ( product.retail - product.wholesale ) / product.retail )
+    end
+  end
+
 end
